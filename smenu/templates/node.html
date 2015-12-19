@@ -1,0 +1,13 @@
+{% load menu %}
+<li {% if has_childrens %}class='active has-sub'{% endif %}>
+    <a {% if url != '' %}href='{{ url }}'{% endif %}>
+        <span>{{ title }}</span>
+    </a>
+    {% if has_childrens %}
+        <ul>
+            {% for c in childrens %}
+                {% node c %}
+            {% endfor %}
+        </ul>
+    {%endif%}
+</li>

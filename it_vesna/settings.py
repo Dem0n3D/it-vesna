@@ -40,6 +40,7 @@ INSTALLED_APPS = (
 
     'it_vesna',
     'contest',
+    'smenu'
 )
 
 MIDDLEWARE_CLASSES = (

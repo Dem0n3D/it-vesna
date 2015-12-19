@@ -1,4 +1,6 @@
 {% load static %}
+{% load menu %}
+
 <!DOCTYPE html>
 <!--[if IE 7 ]>    <html class="ie7 oldie"> <![endif]-->
 <!--[if IE 8 ]>    <html class="ie8 oldie"> <![endif]-->
@@ -15,6 +17,7 @@
     <title>CoolBlue</title>
 
     <link rel="stylesheet" type="text/css" media="screen" href="{% static "css/coolblue.css" %}" />
+    <link rel="stylesheet" type="text/css" media="screen" href="{% static "css/menu.css" %}" />
 
     <!--[if lt IE 9]>
 	    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -48,6 +51,10 @@
 
 <!--/header-->
 </header></div>
+
+<nav>
+    {% menu 'main' %}
+</nav>
 	
 <!-- content-wrap -->
 <div id="content-wrap">
