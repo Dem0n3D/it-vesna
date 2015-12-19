@@ -1,0 +1,30 @@
+{% extends "main.html" %}
+{% load static %}
+
+{% block content %}
+
+{% for post in post_all %}
+<article class="post">
+
+    <div class="primary">
+
+        <h2><a href="/pages/post/{{ post.url }}/">{{ post.title }}</a></h2>
+
+        <p class="post-info">{{ post.date }}</p>
+
+        {% if post.image %}
+        <div class="image-section" style="">
+            <img src="/{{ post.image }}" alt="image post" height="300" width="600"/>
+        </div>
+        {% endif %}
+
+        {{ post.content_prev }}
+
+        <p><a class="more" href="/pages/post/{{ post.url }}/">Подробнее &raquo;</a></p>
+
+    </div>
+
+</article>
+{% endfor %}
+
+{% endblock %}

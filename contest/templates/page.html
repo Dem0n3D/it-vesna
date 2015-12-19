@@ -1,0 +1,25 @@
+{% extends "main.html" %}
+{% load static %}
+
+{% block content %}
+
+<article class="post">
+
+    <div class="primary">
+
+        <h2><a href="/pages/{{ page.url }}/">{{ page.title }}</a></h2>
+
+        <p class="post-info">{{ page.date }}</p>
+
+        {% if page.image %}
+        <div class="image-section" style="">
+            <img src="/{{ page.image }}" alt="image post" height="300" width="600"/>
+        </div>
+        {% endif %}
+
+        {{ page.content }}
+
+    </div>
+
+</article>
+{% endblock %}
