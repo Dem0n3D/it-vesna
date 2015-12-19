@@ -21,5 +21,6 @@ from contest.views import *
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
 
-    url(r'^$', home_page)
+    url(r'^$', home_page),
+    url(r'^application/?$', ApplicationCreateView.as_view())
 ]
